@@ -41,7 +41,7 @@ public class OfficersTest {
         assertThrows(RuntimeException.class, () -> officerRepository.findAll());
     }
 
-   
+
     @Test
     void testCountReturnsZeroInitially() {
         assertEquals(0L, officerRepository.count());
