@@ -1,3 +1,5 @@
+package data.models;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,4 +34,14 @@ public class Vehicle {
     public Owner getOwner() {
         return owner;
     }
+
+@Override
+    public String toString() {
+        return "data.models.Vehicle{" + "id=" + id + ", make=" + make + ", model=" + model + ", plateNumber=" + plateNumber + ", owner=" + owner + (owner != null ? owner.getName() : "No data.models.Owner") +
+                '}';
+}
+
+
+
+
 }

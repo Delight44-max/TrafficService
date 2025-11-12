@@ -1,3 +1,5 @@
+package data.models;
+
 public class Ticket {
     private static int counter = 1;
     private int id;

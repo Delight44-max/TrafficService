@@ -1,3 +1,5 @@
+package data.models;
+
 public enum Offence {
     ONE_WAY,
     DRUNK_DRIVING,

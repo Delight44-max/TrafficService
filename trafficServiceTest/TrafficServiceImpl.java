@@ -1,8 +1,9 @@
+import data.models.*;
 import org.junit.jupiter.api.Test;
 import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TrafficServiceTest {
+public class TrafficServiceImpl {
 
     @Test
     void testRegisterAndIssueTicket() {
@@ -29,14 +30,14 @@ public class TrafficServiceTest {
         TrafficService service = new TrafficService();
 
         Owner owner = new Owner("O2", "James", "0902");
-        Vehicle v = new Vehicle(2, "Honda", "Civic", "XYZ-999", owner);
-        service.registerVehicle(v);
+        Vehicle vehicle = new Vehicle(2, "Honda", "Civic", "XYZ-999", owner);
+        service.registerVehicle(vehicle);
 
         Officer officer = new Officer(2, "Mike", "Corporal");
         service.registerOfficer(officer);
 
-        Ticket t = service.issueTicket(2, Offence.OVER_SPEEDING, 2);
-        service.payTicket(t.getId());
-        assertTrue(t.isHasPaid());
+        Ticket ticket = service.issueTicket(2, Offence.OVER_SPEEDING, 2);
+        service.payTicket(ticket.getId());
+        assertTrue(ticket.isHasPaid());
     }
 }

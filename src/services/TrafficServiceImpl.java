@@ -1,3 +1,4 @@
+package services;
 import data.models.Offence;
 import data.models.Officer;
 import data.models.Ticket;
@@ -5,22 +6,24 @@ import data.models.Vehicle;
 
 import java.util.ArrayList;
 import java.util.List;
-
-public class TrafficService {
+public class TrafficServiceImpl implements TrafficService {
     private List<Vehicle> vehicles = new ArrayList<>();
     private List<Officer> officers = new ArrayList<>();
     private List<Ticket> tickets = new ArrayList<>();
 
+    @Override
     public Vehicle registerVehicle(Vehicle vehicleName) {
         vehicles.add(vehicleName);
         return vehicleName;
     }
 
+    @Override
     public Officer registerOfficer(Officer officer) {
         officers.add(officer);
         return officer;
     }
 
+    @Override
     public Ticket issueTicket(int vehicleId, Offence offence, int officerId) {
         Vehicle foundVehicle = null;
         Officer foundOfficer = null;
@@ -52,6 +55,7 @@ public class TrafficService {
         return ticket;
     }
 
+    @Override
     public List<Ticket> viewTickets(int vehicleId) {
         List<Ticket> result = new ArrayList<>();
 
@@ -64,6 +68,7 @@ public class TrafficService {
         return result;
     }
 
+    @Override
     public void payTicket(int ticketId) {
         for (Ticket ticket : tickets) {
             if (ticket.getId() == ticketId) {
@@ -72,4 +77,6 @@ public class TrafficService {
             }
         }
     }
-}
+
+    }
+

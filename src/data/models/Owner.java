@@ -1,3 +1,5 @@
+package data.models;
+
 public class Owner {
     private String id;
     private String name;
