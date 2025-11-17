@@ -1,4 +1,4 @@
-package data.models;
+package data.repositories.models;
 
 public class Officer {
     private int id;
@@ -15,8 +15,17 @@ public class Officer {
         return id;
     }
 
+
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setRank(String rank) {
+        this.rank = rank;
     }
 
     public String getRank() {

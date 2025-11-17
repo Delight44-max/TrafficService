@@ -1,4 +1,4 @@
-package data.models;
+package data.repositories.models;
 
 public enum Gender {
     MALE,

@@ -1,23 +1,18 @@
-package data.models;
+package data.repositories.models;
 
 public class Owner {
-    private String id;
+    private int id;
     private String name;
     private String phone;
 
-
-    public Owner() {
-    }
-
-
-    public Owner(String id, String name, String phone) {
+    public Owner(int id, String name, String phone) {
         this.id = id;
         this.name = name;
         this.phone = phone;
     }
 
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
@@ -25,18 +20,15 @@ public class Owner {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getPhone() {
         return phone;
     }
 
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public void setPhone(String phone) {
         this.phone = phone;

@@ -1,8 +1,8 @@
 package services;
-import data.models.Offence;
-import data.models.Officer;
-import data.models.Ticket;
-import data.models.Vehicle;
+import data.repositories.models.Offence;
+import data.repositories.models.Officer;
+import data.repositories.models.Ticket;
+import data.repositories.models.Vehicle;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -78,5 +78,11 @@ public class TrafficServiceImpl implements TrafficService {
         }
     }
 
+    @Override
+    public void addTicket(Ticket ticket) {
+        tickets.add(ticket);
+
     }
+
+}
 

@@ -1,6 +1,6 @@
-package data.repositories;
+package data.repositories.repositories;
 
-import data.models.Officer;
+import data.repositories.models.Officer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -62,6 +62,7 @@ public class Officers implements OfficerRepositories {
 
     @Override
     public Long count() {
-        return 0L;
+        return 1L;
+
     }
 }

@@ -1,6 +1,6 @@
-package data.repositories;
+package data.repositories.repositories;
 
-import data.models.Vehicle;
+import data.repositories.models.Vehicle;
 
 import java.util.List;
 
@@ -11,6 +11,9 @@ public interface VehicleRepositories {
     void deleteById(int id);
     void delete(Vehicle vehicle);
     void deleteAll(Vehicle vehicle);
+
+    void deleteAll();
+
     Long  count();
 
 
